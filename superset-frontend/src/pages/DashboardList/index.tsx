@@ -77,6 +77,7 @@ import { UserWithPermissionsAndRoles } from 'src/types/bootstrapTypes';
 import { findPermission } from 'src/utils/findPermission';
 import { navigateTo } from 'src/utils/navigationUtils';
 import { WIDER_DROPDOWN_WIDTH } from 'src/components/ListView/utils';
+import './biPlatformDashboardList.css';
 
 const PAGE_SIZE = 25;
 const PASSWORDS_NEEDED_MESSAGE = t(
@@ -118,6 +119,14 @@ export interface Dashboard {
 
 const Actions = styled.div`
   color: ${({ theme }) => theme.colorIcon};
+`;
+
+const DashboardPageIntro = styled.p`
+  margin: 0 ${({ theme }) => theme.sizeUnit * 6}px
+    ${({ theme }) => theme.sizeUnit * 4}px;
+  max-width: 72ch;
+  color: ${({ theme }) => theme.colorTextSecondary};
+  line-height: 1.5;
 `;
 
 const DASHBOARD_COLUMNS_TO_FETCH = [
@@ -738,8 +747,11 @@ function DashboardList(props: DashboardListProps) {
     });
   }
   return (
-    <>
+    <div className="bi-platform-dashboard-page">
       <SubMenu name={t('Dashboards')} buttons={subMenuButtons} />
+      <DashboardPageIntro>
+        {t('Find, organize, and manage your dashboards in one place.')}
+      </DashboardPageIntro>
       <ConfirmStatusChange
         title={t('Please confirm')}
         description={t(
@@ -859,7 +871,7 @@ function DashboardList(props: DashboardListProps) {
       />
 
       {preparingExport && <Loading />}
-    </>
+    </div>
   );
 }
 
