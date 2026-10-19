@@ -77,6 +77,7 @@ import { UserWithPermissionsAndRoles } from 'src/types/bootstrapTypes';
 import { findPermission } from 'src/utils/findPermission';
 import { navigateTo } from 'src/utils/navigationUtils';
 import { WIDER_DROPDOWN_WIDTH } from 'src/components/ListView/utils';
+import './biPlatformDashboardList.css';
 
 const PAGE_SIZE = 25;
 const PASSWORDS_NEEDED_MESSAGE = t(
@@ -746,7 +747,7 @@ function DashboardList(props: DashboardListProps) {
     });
   }
   return (
-    <>
+    <div className="bi-platform-dashboard-page">
       <SubMenu name={t('Dashboards')} buttons={subMenuButtons} />
       <DashboardPageIntro>
         {t('Find, organize, and manage your dashboards in one place.')}
@@ -870,7 +871,7 @@ function DashboardList(props: DashboardListProps) {
       />
 
       {preparingExport && <Loading />}
-    </>
+    </div>
   );
 }
 
