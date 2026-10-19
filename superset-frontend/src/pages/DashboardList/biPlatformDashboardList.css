@@ -1,0 +1,99 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on
+ * an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+/* BI-Plateforme page-level theme: restrained surfaces, clear hierarchy,
+   and low-noise interactions. All selectors are scoped to this page. */
+.bi-platform-dashboard-page {
+  min-height: 100%;
+  color: #111111;
+  background: #ffffff;
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+}
+
+.bi-platform-dashboard-page .dashboard-list-view .ant-card {
+  overflow: hidden;
+  border: 1px solid #eeeeee;
+  border-radius: 15px;
+  box-shadow: none;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.bi-platform-dashboard-page .dashboard-list-view .ant-card:hover {
+  border-color: #d4d4d4;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 4%);
+}
+
+.bi-platform-dashboard-page .dashboard-list-view .ant-card-meta-title {
+  color: #111111;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.bi-platform-dashboard-page .dashboard-list-view .ant-card-meta-description {
+  color: #888888;
+  line-height: 1.5;
+}
+
+.bi-platform-dashboard-page .ant-btn-primary {
+  border-color: #111111;
+  border-radius: 10px;
+  background: #111111;
+  box-shadow: none;
+  font-weight: 600;
+}
+
+.bi-platform-dashboard-page .ant-btn-primary:hover,
+.bi-platform-dashboard-page .ant-btn-primary:focus {
+  border-color: #333333;
+  background: #333333;
+}
+
+.bi-platform-dashboard-page .ant-input,
+.bi-platform-dashboard-page .ant-input-affix-wrapper,
+.bi-platform-dashboard-page .ant-select-selector {
+  border-color: #eeeeee;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.bi-platform-dashboard-page .ant-input:focus,
+.bi-platform-dashboard-page .ant-input-affix-wrapper:focus,
+.bi-platform-dashboard-page .ant-select-focused .ant-select-selector {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 2px rgb(139 92 246 / 10%);
+}
+
+.bi-platform-dashboard-page :focus-visible {
+  outline-color: #8b5cf6;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bi-platform-dashboard-page *,
+  .bi-platform-dashboard-page *::before,
+  .bi-platform-dashboard-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
