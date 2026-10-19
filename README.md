@@ -1,257 +1,222 @@
 <!--
 Licensed to the Apache Software Foundation (ASF) under one
-or more contributor license agreements.  See the NOTICE file
+or more contributor license agreements. See the NOTICE file
 distributed with this work for additional information
-regarding copyright ownership.  The ASF licenses this file
+regarding copyright ownership. The ASF licenses this file
 to you under the Apache License, Version 2.0 (the
 "License"); you may not use this file except in compliance
-with the License.  You may obtain a copy of the License at
+with the License. You may obtain a copy of the License at
 
   http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
 "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, either express or implied.  See the License for the
+KIND, either express or implied. See the License for the
 specific language governing permissions and limitations
 under the License.
 -->
 
-# Superset
+# BI-Plateforme — Superset Experience
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/license/apache-2-0)
-[![Latest Release on Github](https://img.shields.io/github/v/release/apache/superset?sort=semver)](https://github.com/apache/superset/releases/latest)
-[![Build Status](https://github.com/apache/superset/actions/workflows/superset-python-unittest.yml/badge.svg)](https://github.com/apache/superset/actions)
-[![PyPI version](https://badge.fury.io/py/apache_superset.svg)](https://badge.fury.io/py/apache_superset)
-[![PyPI](https://img.shields.io/pypi/pyversions/apache_superset.svg?maxAge=2592000)](https://pypi.python.org/pypi/apache_superset)
-[![GitHub Stars](https://img.shields.io/github/stars/apache/superset?style=social)](https://github.com/apache/superset/stargazers)
-[![Contributors](https://img.shields.io/github/contributors/apache/superset)](https://github.com/apache/superset/graphs/contributors)
-[![Last Commit](https://img.shields.io/github/last-commit/apache/superset)](https://github.com/apache/superset/commits/master)
-[![Open Issues](https://img.shields.io/github/issues/apache/superset)](https://github.com/apache/superset/issues)
-[![Open PRs](https://img.shields.io/github/issues-pr/apache/superset)](https://github.com/apache/superset/pulls)
-[![Get on Slack](https://img.shields.io/badge/slack-join-orange.svg)](http://bit.ly/join-superset-slack)
-[![Documentation](https://img.shields.io/badge/docs-apache.org-blue.svg)](https://superset.apache.org)
+**A focused design and user-experience initiative by Laurent Ouattara, built on Apache Superset.**
 
-<picture width="500">
-  <source
-    width="600"
-    media="(prefers-color-scheme: dark)"
-    src="https://superset.apache.org/img/superset-logo-horiz-dark.svg"
-    alt="Superset logo (dark)"
-  />
-  <img
-    width="600"
-    src="https://superset.apache.org/img/superset-logo-horiz-apache.svg"
-    alt="Superset logo (light)"
-  />
-</picture>
+[![Based on Apache Superset](https://img.shields.io/badge/based%20on-Apache%20Superset-1f2937?logo=apache)](https://github.com/apache/superset)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE.txt)
+[![Preview workflow](https://github.com/saintLaurent00/superset/actions/workflows/deploy-pages-preview.yml/badge.svg)](https://github.com/saintLaurent00/superset/actions/workflows/deploy-pages-preview.yml)
+[![GitHub branch](https://img.shields.io/badge/work-in%20progress-8b5cf6)](https://github.com/saintLaurent00/superset/tree/bi-plateforme/page-by-page-theme)
 
-A modern, enterprise-ready business intelligence web application.
+> **Project status: active work in progress.** This repository is a personal development fork of Apache Superset. The current focus is a careful, page-by-page refinement of its interface for the BI-Plateforme design direction. It is not an official Apache project or a standalone BI product.
 
-### Documentation
+---
 
-- **[User Guide](https://superset.apache.org/user-docs/)** — For analysts and business users. Explore data, build charts, create dashboards, and connect databases.
-- **[Administrator Guide](https://superset.apache.org/admin-docs/)** — Install, configure, and operate Superset. Covers security, scaling, and database drivers.
-- **[Developer Guide](https://superset.apache.org/developer-docs/)** — Contribute to Superset or build on its REST API and extension framework.
+## Overview
 
-[**Why Superset?**](#why-superset) |
-[**Supported Databases**](#supported-databases) |
-[**Release Notes**](https://github.com/apache/superset/blob/master/RELEASING/README.md#release-notes-for-recent-releases) |
-[**Get Involved**](#get-involved) |
-[**Resources**](#resources) |
-[**Organizations Using Superset**](https://superset.apache.org/inTheWild)
+BI-Plateforme is my effort to make business-intelligence workflows feel clearer, more coherent, and easier to navigate without sacrificing the analytical capabilities that make Apache Superset valuable.
 
-## Why Superset?
+Rather than building a parallel application or replacing Superset's foundations, this work starts with the existing product and improves its experience incrementally: information hierarchy, spacing, visual consistency, readability, interaction feedback, and responsive behaviour.
 
-Superset is a modern data exploration and data visualization platform. Superset can replace or augment proprietary business intelligence tools for many teams. Superset integrates well with a variety of data sources.
+The long-term direction is a professional, data-first interface that helps people move naturally from data sources and datasets to charts, queries, and dashboards.
 
-Superset provides:
+### Preview
 
-- A **no-code interface** for building charts quickly
-- A powerful, web-based **SQL Editor** for advanced querying
-- A **lightweight semantic layer** for quickly defining custom dimensions and metrics
-- Out of the box support for **nearly any SQL** database or data engine
-- A wide array of **beautiful visualizations** to showcase your data, ranging from simple bar charts to geospatial visualizations
-- Lightweight, configurable **caching layer** to help ease database load
-- Highly extensible **security roles and authentication** options
-- An **API** for programmatic customization
-- A **cloud-native architecture** designed from the ground up for scale
+**[Open the BI-Plateforme interface preview](https://saintlaurent00.github.io/superset/)**
 
-## Screenshots & Gifs
+The preview is a static visual prototype served through GitHub Pages when deployment is available. It is intended for reviewing interface direction and navigation—not for connecting databases or running real SQL queries. Its sample metrics and chart content are illustrative.
 
-**Video Overview**
+### What is being refined
 
-<!-- File hosted here https://github.com/apache/superset-site/raw/lfs/superset-video-4k.mp4 -->
+- **Dashboards** — a cleaner way to find, organize, and manage dashboards.
+- **Charts** — a consistent visual language for exploring and presenting data.
+- **Datasets** — clearer entry points for working with analytical datasets.
+- **Data sources** — a more understandable presentation of connection-related workflows.
+- **SQL Lab** — a preview of the query-workspace experience.
 
-[superset-video-1080p.webm](https://github.com/user-attachments/assets/b37388f7-a971-409c-96a7-90c4e31322e6)
+These areas are being approached progressively. A screen appearing in the static preview does not mean its production counterpart has already been redesigned or that its backend behaviour has changed.
 
-<br/>
+---
 
-**Large Gallery of Visualizations**
+## Design principles
 
-<kbd><img title="Gallery" src="https://superset.apache.org/img/screenshots/gallery.jpg"/></kbd><br/>
+The interface direction is deliberately restrained. The aim is to make analytical content—not decorative UI—the centre of attention.
 
-**Craft Beautiful, Dynamic Dashboards**
+| Principle | Direction |
+| --- | --- |
+| **Data first** | Give charts, tables, metrics, and decisions visual priority. |
+| **Minimal and professional** | Reduce unnecessary decoration and visual noise. |
+| **Consistent** | Reuse predictable spacing, controls, borders, and interaction patterns. |
+| **Readable** | Establish clear hierarchy, accessible contrast, and comfortable line lengths. |
+| **Responsive** | Keep core workflows usable across desktop and smaller screens. |
+| **Accessible** | Provide visible focus states and respect reduced-motion preferences. |
+| **Incremental** | Improve existing Superset pages without needlessly replacing their logic. |
 
-<kbd><img title="View Dashboards" src="https://superset.apache.org/img/screenshots/dashboard.jpg"/></kbd><br/>
+### Visual language
 
-**No-Code Chart Builder**
+- **Base palette:** white, near-black, and neutral greys.
+- **Accent:** violet `#8b5cf6`, used selectively for emphasis and focus.
+- **Surfaces:** subtle borders, restrained shadows, and rounded cards.
+- **Typography:** Inter for interface text, with Cormorant Garamond and JetBrains Mono used where appropriate to the broader BI-Plateforme identity.
+- **Motion:** purposeful transitions that respect `prefers-reduced-motion`.
 
-<kbd><img title="Slice & dice your data" src="https://superset.apache.org/img/screenshots/explore.jpg"/></kbd><br/>
+The existing Superset theme system and component conventions remain important. Styling should be scoped where possible and should not break existing workflows.
 
-**Powerful SQL Editor**
+---
 
-<kbd><img title="SQL Lab" src="https://superset.apache.org/img/screenshots/sql_lab.jpg"/></kbd><br/>
+## Current implementation
 
-## Supported Databases
+The current working branch is:
 
-Superset can query data from any SQL-speaking datastore or data engine (Presto, Trino, Athena, [and more](https://superset.apache.org/docs/databases)) that has a Python DB-API driver and a SQLAlchemy dialect.
+```text
+bi-plateforme/page-by-page-theme
+```
 
-Here are some of the major database solutions that are supported:
+The initial implementation includes:
 
-<!-- SUPPORTED_DATABASES_START -->
-<p align="center">
-  <a href="https://superset.apache.org/docs/databases/supported/amazon-athena" title="Amazon Athena"><img src="docs/static/img/databases/amazon-athena.jpg" alt="Amazon Athena" width="76" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/amazon-dynamodb" title="Amazon DynamoDB"><img src="docs/static/img/databases/aws.png" alt="Amazon DynamoDB" width="40" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/amazon-redshift" title="Amazon Redshift"><img src="docs/static/img/databases/redshift.png" alt="Amazon Redshift" width="100" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/apache-doris" title="Apache Doris"><img src="docs/static/img/databases/doris.png" alt="Apache Doris" width="103" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/apache-drill" title="Apache Drill"><img src="docs/static/img/databases/apache-drill.png" alt="Apache Drill" width="81" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/apache-druid" title="Apache Druid"><img src="docs/static/img/databases/druid.png" alt="Apache Druid" width="117" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/apache-hive" title="Apache Hive"><img src="docs/static/img/databases/apache-hive.svg" alt="Apache Hive" width="44" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/apache-impala" title="Apache Impala"><img src="docs/static/img/databases/apache-impala.png" alt="Apache Impala" width="21" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/apache-kylin" title="Apache Kylin"><img src="docs/static/img/databases/apache-kylin.png" alt="Apache Kylin" width="44" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/apache-pinot" title="Apache Pinot"><img src="docs/static/img/databases/apache-pinot.svg" alt="Apache Pinot" width="76" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/apache-solr" title="Apache Solr"><img src="docs/static/img/databases/apache-solr.png" alt="Apache Solr" width="79" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/apache-spark-sql" title="Apache Spark SQL"><img src="docs/static/img/databases/apache-spark.png" alt="Apache Spark SQL" width="75" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/ascend" title="Ascend"><img src="docs/static/img/databases/ascend.webp" alt="Ascend" width="117" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/aurora-mysql-data-api" title="Aurora MySQL (Data API)"><img src="docs/static/img/databases/mysql.png" alt="Aurora MySQL (Data API)" width="77" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/aurora-postgresql-data-api" title="Aurora PostgreSQL (Data API)"><img src="docs/static/img/databases/postgresql.svg" alt="Aurora PostgreSQL (Data API)" width="76" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/azure-data-explorer" title="Azure Data Explorer"><img src="docs/static/img/databases/kusto.png" alt="Azure Data Explorer" width="40" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/azure-synapse" title="Azure Synapse"><img src="docs/static/img/databases/azure.svg" alt="Azure Synapse" width="40" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/clickhouse" title="ClickHouse"><img src="docs/static/img/databases/clickhouse.png" alt="ClickHouse" width="150" height="37" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/cloudflare-d1" title="Cloudflare D1"><img src="docs/static/img/databases/cloudflare.png" alt="Cloudflare D1" width="40" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/cockroachdb" title="CockroachDB"><img src="docs/static/img/databases/cockroachdb.png" alt="CockroachDB" width="150" height="24" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/couchbase" title="Couchbase"><img src="docs/static/img/databases/couchbase.svg" alt="Couchbase" width="150" height="35" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/cratedb" title="CrateDB"><img src="docs/static/img/databases/cratedb.svg" alt="CrateDB" width="180" height="24" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/databend" title="Databend"><img src="docs/static/img/databases/databend.png" alt="Databend" width="100" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/databricks" title="Databricks"><img src="docs/static/img/databases/databricks.png" alt="Databricks" width="152" height="24" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/denodo" title="Denodo"><img src="docs/static/img/databases/denodo.png" alt="Denodo" width="138" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/dremio" title="Dremio"><img src="docs/static/img/databases/dremio.png" alt="Dremio" width="126" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/duckdb" title="DuckDB"><img src="docs/static/img/databases/duckdb.png" alt="DuckDB" width="52" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/elasticsearch" title="Elasticsearch"><img src="docs/static/img/databases/elasticsearch.png" alt="Elasticsearch" width="40" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/exasol" title="Exasol"><img src="docs/static/img/databases/exasol.png" alt="Exasol" width="72" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/firebird" title="Firebird"><img src="docs/static/img/databases/firebird.png" alt="Firebird" width="100" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/firebolt" title="Firebolt"><img src="docs/static/img/databases/firebolt.png" alt="Firebolt" width="100" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/google-bigquery" title="Google BigQuery"><img src="docs/static/img/databases/google-big-query.svg" alt="Google BigQuery" width="76" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/google-sheets" title="Google Sheets"><img src="docs/static/img/databases/google-sheets.svg" alt="Google Sheets" width="76" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/greenplum" title="Greenplum"><img src="docs/static/img/databases/greenplum.png" alt="Greenplum" width="124" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/hologres" title="Hologres"><img src="docs/static/img/databases/hologres.png" alt="Hologres" width="44" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/ibm-db2" title="IBM Db2"><img src="docs/static/img/databases/ibm-db2.svg" alt="IBM Db2" width="91" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/ibm-netezza-performance-server" title="IBM Netezza Performance Server"><img src="docs/static/img/databases/netezza.png" alt="IBM Netezza Performance Server" width="40" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/mariadb" title="MariaDB"><img src="docs/static/img/databases/mariadb.png" alt="MariaDB" width="150" height="37" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/microsoft-sql-server" title="Microsoft SQL Server"><img src="docs/static/img/databases/msql.png" alt="Microsoft SQL Server" width="50" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/monetdb" title="MonetDB"><img src="docs/static/img/databases/monet-db.png" alt="MonetDB" width="100" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/mongodb" title="MongoDB"><img src="docs/static/img/databases/mongodb.png" alt="MongoDB" width="150" height="38" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/motherduck" title="MotherDuck"><img src="docs/static/img/databases/motherduck.png" alt="MotherDuck" width="40" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/oceanbase" title="OceanBase"><img src="docs/static/img/databases/oceanbase.svg" alt="OceanBase" width="175" height="24" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/oracle" title="Oracle"><img src="docs/static/img/databases/oraclelogo.png" alt="Oracle" width="111" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/presto" title="Presto"><img src="docs/static/img/databases/presto-og.png" alt="Presto" width="127" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/risingwave" title="RisingWave"><img src="docs/static/img/databases/risingwave.svg" alt="RisingWave" width="147" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/sap-hana" title="SAP HANA"><img src="docs/static/img/databases/sap-hana.png" alt="SAP HANA" width="137" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/sap-sybase" title="SAP Sybase"><img src="docs/static/img/databases/sybase.png" alt="SAP Sybase" width="100" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/shillelagh" title="Shillelagh"><img src="docs/static/img/databases/shillelagh.png" alt="Shillelagh" width="40" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/singlestore" title="SingleStore"><img src="docs/static/img/databases/singlestore.png" alt="SingleStore" width="150" height="31" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/snowflake" title="Snowflake"><img src="docs/static/img/databases/snowflake.svg" alt="Snowflake" width="76" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/sqlite" title="SQLite"><img src="docs/static/img/databases/sqlite.png" alt="SQLite" width="84" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/starrocks" title="StarRocks"><img src="docs/static/img/databases/starrocks.png" alt="StarRocks" width="149" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/superset-meta-database" title="Superset meta database"><img src="docs/static/img/databases/superset.svg" alt="Superset meta database" width="150" height="39" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/tdengine" title="TDengine"><img src="docs/static/img/databases/tdengine.png" alt="TDengine" width="140" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/teradata" title="Teradata"><img src="docs/static/img/databases/teradata.png" alt="Teradata" width="124" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/timescaledb" title="TimescaleDB"><img src="docs/static/img/databases/timescale.png" alt="TimescaleDB" width="150" height="36" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/trino" title="Trino"><img src="docs/static/img/databases/trino.png" alt="Trino" width="89" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/vertica" title="Vertica"><img src="docs/static/img/databases/vertica.png" alt="Vertica" width="128" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/ydb" title="YDB"><img src="docs/static/img/databases/ydb.svg" alt="YDB" width="110" height="40" /></a> &nbsp;
-  <a href="https://superset.apache.org/docs/databases/supported/yugabytedb" title="YugabyteDB"><img src="docs/static/img/databases/yugabyte.png" alt="YugabyteDB" width="150" height="26" /></a>
-</p>
-<!-- SUPPORTED_DATABASES_END -->
+- a static interface prototype in `docs/index.html`;
+- a GitHub Actions workflow at `.github/workflows/deploy-pages-preview.yml`;
+- a first, scoped visual refinement of the Superset dashboard-list page;
+- page-specific CSS in `superset-frontend/src/pages/DashboardList/biPlatformDashboardList.css`.
 
-**A more comprehensive list of supported databases** along with the configuration instructions can be found [here](https://superset.apache.org/docs/databases).
+### Key files
 
-Want to add support for your datastore or data engine? Read more [here](https://superset.apache.org/docs/frequently-asked-questions#does-superset-work-with-insert-database-engine-here) about the technical requirements.
+| Path | Purpose |
+| --- | --- |
+| `docs/index.html` | Static BI-Plateforme visual preview. |
+| `.github/workflows/deploy-pages-preview.yml` | Publishes the static preview to GitHub Pages. |
+| `superset-frontend/src/pages/DashboardList/index.tsx` | Existing dashboard-list page with initial UX refinements. |
+| `superset-frontend/src/pages/DashboardList/biPlatformDashboardList.css` | Scoped styles for the dashboard-list page. |
 
-## Installation and Configuration
+**Validation status:** this work is ongoing. Do not assume that the full frontend build, automated tests, accessibility audit, or production deployment has passed unless a corresponding successful workflow or test result is available.
 
-Try out Superset's [quickstart](https://superset.apache.org/docs/quickstart/) guide or learn about [the options for production deployments](https://superset.apache.org/docs/installation/architecture/).
+---
 
-## Get Involved
+## Architecture and scope
 
-- Ask and answer questions on [StackOverflow](https://stackoverflow.com/questions/tagged/apache-superset) using the **apache-superset** tag
-- [Join our community's Slack](http://bit.ly/join-superset-slack)
-  and please read our [Slack Community Guidelines](https://github.com/apache/superset/blob/master/CODE_OF_CONDUCT.md#slack-community-guidelines)
-- [Join our dev@superset.apache.org Mailing list](https://lists.apache.org/list.html?dev@superset.apache.org). To join, simply send an email to [dev-subscribe@superset.apache.org](mailto:dev-subscribe@superset.apache.org)
-- If you want to help troubleshoot GitHub Issues involving the numerous database drivers that Superset supports, please consider adding your name and the databases you have access to on the [Superset Database Familiarity Rolodex](https://docs.google.com/spreadsheets/d/1U1qxiLvOX0kBTUGME1AHHi6Ywel6ECF8xk_Qy-V9R8c/edit#gid=0)
-- Join Superset's Town Hall and [Operational Model](https://preset.io/blog/the-superset-operational-model-wants-you/) recurring meetings. Meeting info is available on the [Superset Community Calendar](https://superset.apache.org/community)
+This repository remains based on **Apache Superset**. The intention is to preserve its existing application architecture and extend the experience in place.
 
-## Contributor Guide
+- **Frontend:** the existing Superset React and TypeScript application.
+- **Backend:** the existing Superset Python application and its services.
+- **Data access:** the connectors, SQLAlchemy integrations, metadata, and query workflows provided by Superset.
+- **Interface work:** incremental updates to existing pages and components, with scoped styling where appropriate.
+- **Preview:** static HTML and CSS/JavaScript served independently from the live application.
 
-Interested in contributing? Check out our
-[Developer Guide](https://superset.apache.org/developer-docs/)
-to find resources around contributing along with a detailed guide on
-how to set up a development environment.
+The GitHub Pages prototype has **no connected Superset backend**. Its search, navigation, sample metrics, and actions are demonstrations. It does not authenticate users, connect to a database, execute SQL, or persist dashboard changes.
 
-## Resources
+This distinction is intentional: the static preview helps validate visual direction before those refinements are reviewed and integrated into the real application.
 
-- [Superset "In the Wild"](https://superset.apache.org/inTheWild) - see who's using Superset, and [add your organization](https://github.com/apache/superset/edit/master/RESOURCES/INTHEWILD.yaml) to the list!
-- [Feature Flags](https://superset.apache.org/docs/configuration/feature-flags) - the status of Superset's Feature Flags.
-- [Standard Roles](https://github.com/apache/superset/blob/master/RESOURCES/STANDARD_ROLES.md) - How RBAC permissions map to roles.
-- [Superset Wiki](https://github.com/apache/superset/wiki) - Tons of additional community resources: best practices, community content and other information.
-- [Superset SIPs](https://github.com/orgs/apache/projects/170) - The status of Superset's SIPs (Superset Improvement Proposals) for both consensus and implementation status.
+---
 
-Understanding the Superset Points of View
+## Development approach
 
-- [The Case for Dataset-Centric Visualization](https://preset.io/blog/dataset-centric-visualization/)
-- [Understanding the Superset Semantic Layer](https://preset.io/blog/understanding-superset-semantic-layer/)
+The work follows a page-by-page cycle:
 
-- Getting Started with Superset
-  - [Superset in 2 Minutes using Docker Compose](https://superset.apache.org/docs/installation/docker-compose#installing-superset-locally-using-docker-compose)
-  - [Installing Database Drivers](https://superset.apache.org/docs/configuration/databases#installing-database-drivers)
-  - [Building New Database Connectors](https://preset.io/blog/building-database-connector/)
-  - [Create Your First Dashboard](https://superset.apache.org/docs/using-superset/creating-your-first-dashboard/)
-  - [Comprehensive Tutorial for Contributing Code to Apache Superset
-    ](https://preset.io/blog/tutorial-contributing-code-to-apache-superset/)
-- [Resources to master Superset by Preset](https://preset.io/resources/)
+1. **Inspect** the existing page, components, routes, and interactions.
+2. **Define** the visual and usability changes against the BI-Plateforme direction.
+3. **Implement** the smallest maintainable change in the correct feature location.
+4. **Preserve** existing Superset behaviour and established component patterns.
+5. **Validate** the relevant build, tests, and user flows.
+6. **Review** the result before moving to the next page.
 
-- Deploying Superset
+The guiding rule is simple: improve the interface without introducing regressions or creating a disconnected second application.
 
-  - [Official Docker image](https://hub.docker.com/r/apache/superset)
-  - [Helm Chart](https://github.com/apache/superset/tree/master/helm/superset)
+### Working branch and pull request
 
-- Recordings of Past [Superset Community Events](https://preset.io/events)
+- **Working branch:** [`bi-plateforme/page-by-page-theme`](https://github.com/saintLaurent00/superset/tree/bi-plateforme/page-by-page-theme)
+- **Current draft pull request:** [PR #1 — Apply BI-Plateforme theme to dashboard list](https://github.com/saintLaurent00/superset/pull/1)
+- **Preview workflow:** [GitHub Actions](https://github.com/saintLaurent00/superset/actions/workflows/deploy-pages-preview.yml)
 
-  - [Mixed Time Series Charts](https://preset.io/events/mixed-time-series-visualization-in-superset-workshop/)
-  - [How the Bing Team Customized Superset for the Internal Self-Serve Data & Analytics Platform](https://preset.io/events/how-the-bing-team-heavily-customized-superset-for-their-internal-data/)
-  - [Live Demo: Visualizing MongoDB and Pinot Data using Trino](https://preset.io/events/2021-04-13-visualizing-mongodb-and-pinot-data-using-trino/)
-  - [Introduction to the Superset API](https://preset.io/events/introduction-to-the-superset-api/)
-  - [Building a Database Connector for Superset](https://preset.io/events/2021-02-16-building-a-database-connector-for-superset/)
+The pull request is a work in progress. Review its current checks and discussion before treating any change as ready to merge.
 
-- Visualizations
+---
 
-  - [Creating Viz Plugins](https://superset.apache.org/docs/contributing/creating-viz-plugins/)
-  - [Managing and Deploying Custom Viz Plugins](https://medium.com/nmc-techblog/apache-superset-manage-custom-viz-plugins-in-production-9fde1a708e55)
-  - [Why Apache Superset is Betting on Apache ECharts](https://preset.io/blog/2021-4-1-why-echarts/)
+## Getting started
 
-- [Superset API](https://superset.apache.org/docs/rest-api)
+### Review the visual prototype
 
-## Repo Activity
+Open the [BI-Plateforme preview](https://saintlaurent00.github.io/superset/). If the site is unavailable, check the [GitHub Pages deployment workflow](https://github.com/saintLaurent00/superset/actions/workflows/deploy-pages-preview.yml) and the repository's [Pages settings](https://github.com/saintLaurent00/superset/settings/pages).
 
-<a href="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats?repo_id=39464018" target="_blank" align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats/thumbnail.png?repo_id=39464018&image_size=auto&color_scheme=dark" width="655" height="auto" />
-    <img alt="Performance Stats of apache/superset - Last 28 days" src="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats/thumbnail.png?repo_id=39464018&image_size=auto&color_scheme=light" width="655" height="auto" />
-  </picture>
-</a>
+### Clone the repository
 
-<!-- Made with [OSS Insight](https://ossinsight.io/) -->
+```bash
+git clone https://github.com/saintLaurent00/superset.git
+cd superset
+git fetch origin
+git switch bi-plateforme/page-by-page-theme
+```
 
-<!-- telemetry/analytics pixel: -->
-<img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=bc1c90cd-bc04-4e11-8c7b-289fb2839492" />
+### Run the full Superset application
+
+Apache Superset has a Python backend and a JavaScript/TypeScript frontend, along with specific development dependencies and setup requirements. Follow the official instructions rather than relying on the static preview:
+
+- [Apache Superset documentation](https://superset.apache.org/)
+- [Installation guide](https://superset.apache.org/docs/installation/installing-superset-from-scratch/)
+- [Developer documentation](https://superset.apache.org/developer-docs/)
+- [Contributing guide](https://github.com/apache/superset/blob/master/CONTRIBUTING.md)
+
+Before submitting changes, run the relevant checks described by the upstream contributor documentation and any checks required by the pull request.
+
+---
+
+## Roadmap
+
+The roadmap is intentionally iterative and may change as each screen is reviewed.
+
+- [x] Establish a dedicated working branch for BI-Plateforme interface work.
+- [x] Create an initial static preview for core BI navigation areas.
+- [x] Add an automated GitHub Pages deployment workflow.
+- [x] Apply the first scoped visual refinements to the dashboard list.
+- [ ] Confirm and stabilize the GitHub Pages deployment.
+- [ ] Validate the dashboard-list changes against the actual Superset frontend.
+- [ ] Review responsive behaviour, keyboard navigation, focus visibility, and reduced motion.
+- [ ] Refine the next page only after the current page is reviewed.
+- [ ] Expand automated checks and document verified outcomes.
+
+A checked item records implementation work, not necessarily a successful production release. Deployment and validation are tracked separately.
+
+---
+
+## About the maintainer
+
+**Laurent Ouattara** — Software Engineer & Builder
+
+I work across software engineering, data systems, AI, and security. I am interested in building useful, scalable technology and in making complex systems easier for people to understand and use.
+
+BI-Plateforme is part of that direction: combining strong engineering foundations with a thoughtful, accessible interface for data exploration and decision-making, with a long-term interest in solutions that can create meaningful value in African contexts.
+
+- **GitHub:** [@saintLaurent00](https://github.com/saintLaurent00)
+- **BI-Plateforme project:** [github.com/saintLaurent00/BI-Plateforme](https://github.com/saintLaurent00/BI-Plateforme)
+- **Upstream project:** [Apache Superset](https://github.com/apache/superset)
+
+---
+
+## Upstream project and acknowledgements
+
+This work builds on [Apache Superset](https://github.com/apache/superset), an open-source business-intelligence platform maintained by its community and contributors.
+
+Superset's original code, trademarks, documentation, and licensing notices remain subject to their respective terms. This personal fork is **not affiliated with, endorsed by, or an official distribution of the Apache Software Foundation**.
+
+For the canonical product documentation, supported database details, release notes, and full upstream capabilities, consult the [official Apache Superset project](https://github.com/apache/superset).
+
+## License
+
+Apache Superset is distributed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). See the repository's license and notice files for the applicable terms and attributions.
